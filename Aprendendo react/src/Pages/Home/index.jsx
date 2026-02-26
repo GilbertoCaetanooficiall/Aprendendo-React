@@ -17,12 +17,7 @@ function Home() {
       email: 'gilberto.caetano@gmail.com',
       idade: 25
     },
-    {
-      id: 3,
-      name: 'Maria',
-      email: 'maria.silva@gmail.com',
-      idade: 25
-    },
+    
   ]
 
   return (
@@ -31,22 +26,19 @@ function Home() {
       <div className='container'>
           <h1>Olá React!</h1>
           <form>
-            {users.map(user=>(
-              
-            ))}
             <input type="text" name="name" placeholder='digite seu nome'/>
             <input type="email" name="email" placeholder='digite seu email' />
             <input type="number" name="idade" placeholder='digite sua idade'/>
             <button type='submit'>Cadastrar</button>
           </form>
-
-          <div>
+            {users.map(user=>(<div className='card'>
             <div>
-              <p>Nome: </p>
-              <p> Idade: </p>
-              <p>Email: </p>
+              <p>Nome: {user.name}</p>
+              <p> Idade: {user.idade}</p>
+              <p>Email: {user.email}</p>
             </div>
-          </div>
+          </div>))}
+          
       </div>
       
     </>
