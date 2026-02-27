@@ -10,6 +10,7 @@
  h1{
     color: #fff;
     font-size: 32px;
+   text-align: center;
  }
 
  form{
@@ -59,4 +60,23 @@
     width: 400px;
     font-weight: bold;
     color: #fff;
+   & p{
+         font-weight: bold;
+         color: #fff;
+   }
+
+   & span{
+        font-weight: normal;
+        color: #ffffff;
+   }
+   
+    & i{
+        color: #f5f0f0;
+        cursor: pointer;
+        padding-left: 280px;
+    }
+       & i:hover{
+         color: #b9b6b6;
+         opacity: 0.8;
+      }
  }

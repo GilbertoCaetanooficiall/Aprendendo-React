@@ -17,6 +17,12 @@ function Home() {
       email: 'gilberto.caetano@gmail.com',
       idade: 25
     },
+     {
+      id: 3,
+      name: 'Carlos',
+      email: 'carlos.silva@gmail.com',
+      idade: 30
+    },
     
   ]
 
@@ -24,8 +30,9 @@ function Home() {
     <>
      
       <div className='container'>
-          <h1>Olá React!</h1>
+         
           <form>
+             <h1>Olá React!</h1>
             <input type="text" name="name" placeholder='digite seu nome'/>
             <input type="email" name="email" placeholder='digite seu email' />
             <input type="number" name="idade" placeholder='digite sua idade'/>
@@ -33,9 +40,9 @@ function Home() {
           </form>
             {users.map(user=>(<div className='card'>
             <div>
-              <p>Nome: {user.name}</p>
-              <p> Idade: {user.idade}</p>
-              <p>Email: {user.email}</p>
+              <p>Nome: <span>{user.name}</span></p>
+              <p> Idade: <span>{user.idade}</span> <i className="fas fa-trash"></i></p>
+              <p>Email: <span>{user.email}</span></p>
             </div>
           </div>))}
           
